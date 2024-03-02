@@ -39,9 +39,6 @@ def coeficiente_variacao_populacional(base):
 def quartis(base):
   M = mediana(base)
   q1 = mediana(base[0 : base.index(M)])
-  q3 = mediana(base[base.index(M) + 1 : len(base)])
+  q3 = mediana(base[base.index(M):len(base) - 1])
 
   return q1, M, q3
-
-
-  
